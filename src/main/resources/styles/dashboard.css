@@ -1,0 +1,125 @@
+/* =================================================== */
+/*           MINIMAL INDIGO – 2025 PREMIUM LIGHT       */
+/* =================================================== */
+
+.root {
+    -fx-background-color: #f8fafc;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Roboto", sans-serif;
+}
+
+/* Top bar – ultra clean */
+.topbar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 0 36px;
+    -fx-pref-height: 76px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-effect: dropshadow(gaussian, rgba(15, 49, 92, 0.06), 20, 0, 0, 6);
+}
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #4c1d95;   /* Indigo profond */
+}
+
+/* Bouton déconnexion */
+.logout-btn {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-padding: 11 28;
+    -fx-background-radius: 30px;
+}
+.logout-btn:hover {
+    -fx-background-color: #b91c1c;
+    -fx-translate-y: -1px;
+}
+
+/* Sidebar – effet papier léger */
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 40px 28px;
+    -fx-background-radius: 0 32px 32px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.07), 30, 0.15, 6, 0);
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* Logo */
+.logo-box {
+    -fx-spacing: 8px;
+    -fx-padding: 0 0 70px 12px;
+}
+.logo-text {
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #6366f1;         /* Indigo moderne */
+    -fx-effect: dropshadow(glow, #a5b4fc, 15, 0.7, 0, 0);
+}
+.logo-sub {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+}
+
+/* Titres de section */
+.menu-section {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 32px 0 14px 16px;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 2.2px;
+}
+
+/* Liens du menu – le vrai secret du look "premium" */
+.menu-item {
+    -fx-text-fill: #475569;
+    -fx-font-size: 15.5px;
+    -fx-font-weight: 500;
+    -fx-padding: 16px 22px;
+    -fx-background-radius: 20px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-transition: all 0.28s ease;
+}
+.menu-item:hover {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #6366f1;
+    -fx-translate-x: 9px;
+    -fx-effect: innershadow(gaussian, #c7d2fe, 10, 0.3, 0, 0);
+}
+.menu-item:pressed,
+.menu-item:selected {
+    -fx-background-color: #6366f1;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(gaussian, #4f46e5, 15, 0.4, 0, 4);
+}
+
+/* Contenu principal */
+.content-area {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 28px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 30, 0.15, 0, 12);
+}
+.content-scroll {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+/* Panneau droit */
+.right-panel {
+    -fx-background-color: #f8fafc;
+    -fx-padding: 40px 32px;
+    -fx-background-radius: 32px 0 0 32px;
+}
+.right-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1e293b;
+}

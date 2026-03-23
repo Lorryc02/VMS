@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controllers.InitierController"
+            prefWidth="700" prefHeight="400">
+
+    <VBox spacing="15" layoutX="30" layoutY="30">
+
+        <Label text="Initier une demande de voucher"
+               style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Nom du client :" prefWidth="150"/>
+            <TextField fx:id="clientNameField" promptText="Ex: John Doe" prefWidth="250"/>
+
+            <Button fx:id="dropdownButton"
+                    text="▼"
+                    prefWidth="35"
+                    prefHeight="30"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+
+            <Button fx:id="addClientButton"
+                    text="+"
+                    prefWidth="35"
+                    prefHeight="30"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold; -fx-cursor: hand;" />
+
+            <Button fx:id="searchButton"
+                    text="🔍"
+                    prefWidth="35"
+                    prefHeight="30"
+                    style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Valeur du voucher :" prefWidth="150"/>
+            <TextField fx:id="voucherValueField" promptText="Ex: 500" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Nombre de vouchers :" prefWidth="150"/>
+            <TextField fx:id="voucherCountField" promptText="Ex: 10" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Validité (date fin) :" prefWidth="150"/>
+            <DatePicker fx:id="validityDatePicker" prefWidth="250"/>
+        </HBox>
+
+        <Button text="Créer la demande"
+                fx:id="submitButton"
+                prefWidth="200"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </VBox>
+
+</AnchorPane>
