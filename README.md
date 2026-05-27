@@ -102,6 +102,6 @@ src/
         └── styles/
             ├── login.css
             └── dashboard.css
-            ```
-            
+
+   ```            
 Dévéloppé avec rigueur dans un objectif de performance, de traçabilité et de sécurité des transactions.
