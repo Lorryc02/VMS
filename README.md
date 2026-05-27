@@ -39,3 +39,62 @@ Le système implémente une matrice de droits d'accès stricte selon le rôle de
 ## 🔄 Flux de Traitement d'une Demande
 
 Le cycle de vie d'un bon cadeau (Voucher) suit un workflow métier précis et sécurisé :
+
+[ Initiateur ] ──( Crée la demande )──> Statut: INITIÉ
+│
+▼
+[ Approbateur ] ──( Analyse & Valide )──> Statut: APPROUVÉ ou REJETÉ
+│
+▼
+[ Comptable ]   ──( Effectue le versement )──> Statut: PAYÉ
+
+📂 Structure du Projet (Modèle MVC)
+Le code source respecte une architecture claire séparant l'interface graphique (views), la logique métier (controllers), l'accès aux données (models/DAO) et la sécurité (service).
+
+Plaintext
+src/
+└── main/
+    ├── java/
+    │   └── org/example/
+    │       ├── Main.java
+    │       ├── controllers/         # Logique des fenêtres et des événements
+    │       │   ├── LoginController.java
+    │       │   ├── DashboardController.java
+    │       │   ├── OverviewController.java
+    │       │   ├── InitierController.java
+    │       │   ├── ValiderController.java
+    │       │   ├── PaiementController.java
+    │       │   ├── ModifierVoucherController.java
+    │       │   ├── MessagesController.java
+    │       │   ├── AjoutClientController.java
+    │       │   ├── AjoutUserController.java
+    │       │   ├── ModifierSupprimerClientsController.java
+    │       │   └── ModifierSupprimerUserController.java
+    │       ├── models/              # Objets Métier et Data Access Objects (DAO)
+    │       │   ├── User.java
+    │       │   ├── Client.java
+    │       │   ├── Demandes.java
+    │       │   ├── Voucher.java
+    │       │   ├── DatabaseConnection.java
+    │       │   ├── UserDAO.java
+    │       │   ├── ClientDAO.java
+    │       │   ├── DemandeDAO.java
+    │       │   ├── VoucherDAO.java
+    │       │   └── UserSession.java
+    │       ├── service/             # Logique applicative (Authentification sécurisée)
+    │       │   └── AuthService.java
+    │       └── utils/               # Classes utilitaires de session
+    │           └── Session.java
+    └── resources/
+        ├── views/                   # Maquettes graphiques FXML
+        │   ├── Login.fxml
+        │   ├── Dashboard.fxml
+        │   ├── overview.fxml
+        │   ├── Initier.fxml
+        │   ├── Valider.fxml
+        │   └── [ ... autres fichiers FXML ... ]
+        └── styles/                  # Feuilles de style de l'application
+            ├── login.css
+            └── dashboard.css
+            
+Dévéloppé avec rigueur dans un objectif de performance, de traçabilité et de sécurité des transactions.
