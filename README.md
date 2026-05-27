@@ -56,7 +56,7 @@ src/
     ├── java/
     │   └── org/example/
     │       ├── Main.java
-    │       ├── controllers/         # Logique des fenêtres et des événements
+    │       ├── controllers/
     │       │   ├── LoginController.java
     │       │   ├── DashboardController.java
     │       │   ├── OverviewController.java
@@ -69,7 +69,7 @@ src/
     │       │   ├── AjoutUserController.java
     │       │   ├── ModifierSupprimerClientsController.java
     │       │   └── ModifierSupprimerUserController.java
-    │       ├── models/              # Objets Métier et Data Access Objects (DAO)
+    │       ├── models/
     │       │   ├── User.java
     │       │   ├── Client.java
     │       │   ├── Demandes.java
@@ -80,20 +80,25 @@ src/
     │       │   ├── DemandeDAO.java
     │       │   ├── VoucherDAO.java
     │       │   └── UserSession.java
-    │       ├── service/             # Logique applicative (Authentification sécurisée)
+    │       ├── service/
     │       │   └── AuthService.java
-    │       └── utils/               # Classes utilitaires de session
+    │       └── utils/
     │           └── Session.java
     └── resources/
-        ├── views/                   # Maquettes graphiques FXML
+        ├── views/
         │   ├── Login.fxml
         │   ├── Dashboard.fxml
         │   ├── overview.fxml
         │   ├── Initier.fxml
         │   ├── Valider.fxml
-        │   └── [ ... autres fichiers FXML ... ]
-        └── styles/                  # Feuilles de style de l'application
+        │   ├── voucher_paiement.fxml
+        │   ├── voucher_modifier.fxml
+        │   ├── messages.fxml
+        │   ├── AjoutClient.fxml
+        │   ├── AjoutUser.fxml
+        │   ├── modifierSupprimerClients.fxml
+        │   └── modifierSupprimerUser.fxml
+        └── styles/
             ├── login.css
             └── dashboard.css
-            
 Dévéloppé avec rigueur dans un objectif de performance, de traçabilité et de sécurité des transactions.
