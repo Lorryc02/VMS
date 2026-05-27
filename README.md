@@ -39,7 +39,7 @@ Le système implémente une matrice de droits d'accès stricte selon le rôle de
 ## 🔄 Flux de Traitement d'une Demande
 
 Le cycle de vie d'un bon cadeau (Voucher) suit un workflow métier précis et sécurisé :
-
+```text
 [ Initiateur ] ──( Crée la demande )──> Statut: INITIÉ
 │
 ▼
